@@ -1,15 +1,17 @@
+/* eslint-disable global-require */
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Main from './pages/Main';
+import logo from './public/images/logo.png';
 
 export function App() {
   return (
     <>
       <BrowserRouter>
         <div className="Navbar">
-          <img alt="logo" className="LogoPicture" src="./public/images/logo.png" />
+          <img alt="logo" className="LogoPicture" src={logo} />
           <ul>
             <li>
               <NavLink exact activeClassName="selected" to="/">
