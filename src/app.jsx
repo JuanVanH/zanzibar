@@ -1,34 +1,58 @@
 /* eslint-disable global-require */
-import React from 'react';
+import React, { useState } from 'react';
 import { hot } from 'react-hot-loader/root';
 import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Main from './pages/Main';
-import logo from './public/images/logo.png';
+import logo from './public/images/LOGO-OLKARIA.png';
 
 export function App() {
+  const [ham, setHam] = useState(false);
   return (
     <>
       <BrowserRouter>
-        <div className="Navbar">
-          <img alt="logo" className="LogoPicture" src={logo} />
-          <ul>
-            <li>
+        <div className="nav-bar">
+          <img alt="logo" className="nav-logo" src={logo} />
+          <div className="nav-buttons">
+            <div className="nav-button">
               <NavLink exact activeClassName="selected" to="/">
-                Kite
+                Holidays
               </NavLink>
-            </li>
-            <li>
-              <NavLink exact activeClassName="selected" to="/members">
-                Safari
+            </div>
+            <div className="nav-button">
+              <NavLink exact activeClassName="selected" to="/kite">
+                Kitesurfing
               </NavLink>
-            </li>
-            <li>
-              <NavLink exact activeClassName="selected" to="/admin">
-                Dive
+            </div>
+            <div className="nav-button">
+              <NavLink exact activeClassName="selected" to="/offer">
+                Offers
               </NavLink>
-            </li>
-          </ul>
+            </div>
+            <div className="nav-button">
+              <NavLink exact activeClassName="selected" to="/shop">
+                Shop
+              </NavLink>
+            </div>
+            <div className="nav-button">
+              <NavLink exact activeClassName="selected" to="/contact">
+                Contact
+              </NavLink>
+            </div>
+            <div className="nav-button">
+              <NavLink exact activeClassName="selected" to="/about">
+                About
+              </NavLink>
+            </div>
+          </div>
+          <button type="button" className="nav-ham" onClick={() => setHam(prev => !prev)}>
+            ham
+          </button>
+        </div>
+        <div className={`nav-sidebar ${ham && 'active'}`}>
+          <button type="button" className="nav-sidebar-close" onClick={() => setHam(prev => !prev)}>
+            X
+          </button>
         </div>
 
         <div className="Container">
