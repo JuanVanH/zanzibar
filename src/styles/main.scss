@@ -7,8 +7,15 @@
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   top: 81px;
+
   @media (max-width: 980px) {
-    width: 345px;
+    width: 40%;
+  }
+  @media (max-width: 824) {
+    width: 60%;
+  }
+  @media (max-width: 612px) {
+    width: 80%;
   }
 }
 .main-title {
@@ -26,6 +33,11 @@
     font-size: 34px;
     top: 361px;
   }
+  @media (max-width: 410px) {
+    font-size: 34px;
+    top: 300px;
+    text-align: center;
+  }
 }
 .main-subtitle {
   font-family: 'Oswald', sans-serif;
@@ -41,7 +53,13 @@
   width: 636px;
   text-align: center;
   @media (max-width: 980px) {
-    font-size: 34px;
+    font-size: 30px;
     top: 451px;
+    width: 90%;
+  }
+  @media (max-width: 400px) {
+    font-size: 30px;
+    top: 400px;
+    text-align: center;
   }
 }
