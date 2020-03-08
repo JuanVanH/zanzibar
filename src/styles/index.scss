@@ -95,6 +95,13 @@ h1 {
     display: inline-block;
   }
 }
+h2 {
+  color: #242424;
+  font-weight: 100;
+  &.Inline {
+    display: inline-block;
+  }
+}
 button {
   &.Add {
     border: 0;
