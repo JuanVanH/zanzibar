@@ -1,6 +1,10 @@
 import React from 'react';
 import widePicture from '../public/images/bg.svg';
 import zanzi from '../public/images/arushaVSzanzibar.svg';
+import navimg from '../public/images/nav.png';
+import bookimg from '../public/images/book.png';
+import planimg from '../public/images/plan.png';
+import contactimg from '../public/images/contact.png';
 
 function Main() {
   return (
@@ -34,6 +38,28 @@ function Main() {
             Tanzania and we create the perfect holiday for you.
           </p>
         </p>
+      </div>
+      <div className="main-section">
+        <div className="logo-text">
+          <img src={navimg} alt="nav" />
+          <h1>Explore and choose</h1>
+          <p>Have a look at what we have to offer and compose the holiday of your dreams</p>
+        </div>
+        <div className="logo-text">
+          <img src={contactimg} alt="nav" />
+          <h1>Contact host</h1>
+          <p>Get in contact with us and tell us about your wishes</p>
+        </div>
+        <div className="logo-text">
+          <img src={planimg} alt="nav" />
+          <h1>Make a plan</h1>
+          <p>We create a holiday with your wishes adapted to your budget </p>
+        </div>
+        <div className="logo-text">
+          <img src={bookimg} alt="nav" />
+          <h1>Book</h1>
+          <p>Confirm your booking and reservation </p>
+        </div>
       </div>
     </>
   );
